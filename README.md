@@ -3,7 +3,41 @@ android-subtle-prompts
 
 Library which enables the creation of user information prompts similar to those in the Guardian Android app
 
-![](sample.png)
+![ScreenShot](sample_small.png?raw=true "Subtle Prompt on view")
+
+Usabge
+--------
+
+Call SubtlePromptHelper to get an inflated view with a subtle prompt.
+
+    BaseSubtlePrompt baseSubtlePrompt = SubtlePromptHelper.getPromptOnExpandableList(context);
+    baseSubtlePrompt.setAnimation(listener);
+
+To add a popping button animated with the subtle prompt, for that, call setAnimation with the
+view to animate, and set the standard and popping drawables to use. 
+
+    baseSubtlePrompt.setAnimation(animatedView, listener);
+    baseSubtlePrompt.setPromptTitle(promptTitle);
+    baseSubtlePrompt.setPoppingIcon(poppingIconDrawable);
+    baseSubtlePrompt.setStandardIcon(standardIconDrawable);
+
+To add animage to the prompt as the one on the example, set the fields promptImage and bodyText.
+
+    baseSubtlePrompt.setBodyText(context.getString(R.string.save_for_later_prompt_body));
+    baseSubtlePrompt.setPromptImage(context.getResources().getDrawable(R.drawable.subtle_prompt_image));
+
+Don't forget to add the drawable for your close button
+
+    baseSubtlePrompt.setPromptCloseButton(closeButtonDrawable);
+
+Your listener controls what happen when the subtle prompt is closed
+
+    new BaseSubtlePrompt.Listener() {
+        @Override
+        public void onCollapseEnd() {
+            // Do something when the subtlePrompt is dismissed
+        }
+    });
 
 
 ProGuard
