@@ -22,4 +22,4 @@
         android:startOffset="500"
         android:toXScale="0.85"
         android:toYScale="0.85" />
-</set><!-- From: file:/Users/jgumiel/development/git/android-news-app/subtlepromptlibrary/src/main/res/anim/zoom_in_out.xml -->
+</set><!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/anim/zoom_in_out.xml -->
