@@ -5,7 +5,7 @@ Library which enables the creation of user information prompts similar to those 
 
 ![ScreenShot](sample_small.png?raw=true "Subtle Prompt on view")
 
-Usabge
+Usage
 --------
 
 Call SubtlePromptHelper to get an inflated view with a subtle prompt.
@@ -23,12 +23,12 @@ view to animate, and set the standard and popping drawables to use.
 
 To add animage to the prompt as the one on the example, set the fields promptImage and bodyText.
 
-    baseSubtlePrompt.setBodyText(context.getString(R.string.save_for_later_prompt_body));
-    baseSubtlePrompt.setPromptImage(context.getResources().getDrawable(R.drawable.subtle_prompt_image));
+    baseSubtlePrompt.setBodyText(bodyString;
+    baseSubtlePrompt.setPromptImage(promptDrawable);
 
-Don't forget to add the drawable for your close button
+Don't forget to add the drawable for close button
 
-    baseSubtlePrompt.setPromptCloseButton(closeButtonDrawable);
+    baseSubtlePrompt.setPromptCloseButton(closeDrawable);
 
 Your listener controls what happen when the subtle prompt is closed
 
