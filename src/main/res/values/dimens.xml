@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_height">64dp</dimen>
+    <dimen name="prompt_popup_height">83dp</dimen>
+
+    <dimen name="prompt_popup_with_image_height">100dp</dimen>
+    <dimen name="prompt_arrow_margin_top">4dp</dimen>
+    <dimen name="prompt_arrow_margin_left">50dp</dimen>
+    <dimen name="prompt_arrow_save_for_later_signed_margin_left">148dp</dimen>
+    <dimen name="prompt_arrow_save_for_later_margin_left">198dp</dimen>
+    <dimen name="prompt_text_title_big_size">26sp</dimen>
+    <dimen name="prompt_text_title_size">20sp</dimen>
+    <dimen name="prompt_text_body_size">14sp</dimen>
+    <dimen name="prompt_icon_size">28dp</dimen>
+    <dimen name="prompt_icon_padding">4dp</dimen>
+</resources>

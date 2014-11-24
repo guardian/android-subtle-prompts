@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prompt_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/prompt_arrow_margin_left"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/arrow"/>
+
+    <RelativeLayout
+        android:id="@+id/prompt_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/prompt_bg"
+        android:layout_below="@id/arrow">
+
+        <ImageView
+            android:id="@+id/prompt_close_button"
+            style="@style/subtlePromptImageView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/cancel" />
+
+        <ImageView
+            android:id="@+id/prompt_image_view"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentBottom="true" />
+
+        <com.guardian.view.CardTextView
+            android:id="@+id/prompt_title_text"
+            style="@style/subtlePromptTitle"
+            android:layout_toLeftOf="@id/prompt_close_button"
+            android:layout_toRightOf="@id/prompt_image_view" />
+
+        <com.guardian.view.CardTextView
+            android:id="@+id/prompt_body_text"
+            style="@style/subtlePromptBody"
+            android:layout_toRightOf="@id/prompt_image_view"
+            android:layout_below="@id/prompt_title_text"/>
+    </RelativeLayout>
+
+</com.guardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt>

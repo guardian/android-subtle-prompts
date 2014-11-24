@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="subtlePromptImageView">
+        <item name="android:layout_width">@dimen/prompt_icon_size</item>
+        <item name="android:layout_height">@dimen/prompt_icon_size</item>
+        <item name="android:layout_marginLeft">@dimen/prompt_icon_padding</item>
+        <item name="android:layout_marginRight">@dimen/prompt_icon_padding</item>
+    </style>
+
+    <style name="subtlePromptTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/prompt_text_title_size</item>
+    </style>
+
+    <style name="subtlePromptBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/prompt_text_body_size</item>
+    </style>
+</resources>
