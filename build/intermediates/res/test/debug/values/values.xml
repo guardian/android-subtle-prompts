@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/jgumiel/development/git/android-news-app/subtlepromptlibrary/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <color name="prompt_bg">#005689</color>
     <dimen name="action_bar_height">64dp</dimen>

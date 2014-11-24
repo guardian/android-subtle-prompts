@@ -48,4 +48,4 @@
             android:layout_below="@id/prompt_title_text"/>
     </RelativeLayout>
 
-</com.guardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt><!-- From: file:/Users/jgumiel/development/git/android-news-app/subtlepromptlibrary/src/main/res/layout/subtle_prompt_layout.xml --><!-- From: file:/Users/jgumiel/development/git/android-news-app/subtlepromptlibrary/build/intermediates/bundles/debug/res/layout/subtle_prompt_layout.xml -->
+</com.guardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt><!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/layout/subtle_prompt_layout.xml --><!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/build/intermediates/bundles/debug/res/layout/subtle_prompt_layout.xml -->
