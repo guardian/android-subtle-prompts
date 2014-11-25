@@ -1,4 +1,4 @@
-package com.guardian.subtlepromptlibrary.views.prompts;
+package com.theguardian.subtlepromptlibrary.views.prompts;
 
 import android.animation.Animator;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.guardian.subtlepromptlibrary.R;
-import com.guardian.subtlepromptlibrary.views.SmoothHeaderRelativeLayout;
+import com.theguardian.subtlepromptlibrary.R;
+import com.theguardian.subtlepromptlibrary.views.SmoothHeaderRelativeLayout;
 
 public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View.OnClickListener {
 

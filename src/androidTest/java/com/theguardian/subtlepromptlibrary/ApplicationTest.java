@@ -1,4 +1,4 @@
-package com.guardian.subtlepromptlibrary;
+package com.theguardian.subtlepromptlibrary;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

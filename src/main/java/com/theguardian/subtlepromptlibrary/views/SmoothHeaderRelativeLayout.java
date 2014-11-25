@@ -1,4 +1,4 @@
-package com.guardian.subtlepromptlibrary.views;
+package com.theguardian.subtlepromptlibrary.views;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -9,11 +9,10 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.animation.LinearInterpolator;
 import android.widget.RelativeLayout;
 
-import com.guardian.subtlepromptlibrary.R;
+import com.theguardian.subtlepromptlibrary.R;
 
 public class SmoothHeaderRelativeLayout extends RelativeLayout {
     private static final int DELAY_SHOW_POPUP = 500;

@@ -1,11 +1,11 @@
-package com.guardian.subtlepromptlibrary.views.prompts;
+package com.theguardian.subtlepromptlibrary.views.prompts;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.RelativeLayout;
 
-import com.guardian.subtlepromptlibrary.R;
+import com.theguardian.subtlepromptlibrary.R;
 
 public class SubtlePromptHelper {
 
