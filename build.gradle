@@ -16,7 +16,7 @@ android {
     buildToolsVersion "21.1.0"
 
     defaultConfig {
-        applicationId "com.guardian.subtlepromptlibrary"
+        applicationId "com.theguardian.subtlepromptlibrary"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
