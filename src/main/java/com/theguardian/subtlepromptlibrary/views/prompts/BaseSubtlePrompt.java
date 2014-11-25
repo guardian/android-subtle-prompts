@@ -2,6 +2,7 @@ package com.theguardian.subtlepromptlibrary.views.prompts;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -24,6 +25,9 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
     private AnimationSet poppingButtonAnimation;
     private Drawable poppingIcon;
     private Drawable standardIcon;
+    private Bitmap poppingIconBitmap;
+    private Bitmap standardIconBitmap;
+
     private ImageView promptCloseImageView;
     private View arrowView;
     private boolean withPoppingButton;
@@ -83,16 +87,16 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
         promptImage.setBackgroundDrawable(drawable);
     }
 
-    public Drawable getPoppingIconDrawable() {
-        return poppingIcon;
-    }
-
-    public Drawable getStandardIconDrawable() {
-        return standardIcon;
-    }
-
     public void setPoppingIcon(Drawable poppingIcon) {
         this.poppingIcon = poppingIcon;
+    }
+
+    public void setPoppingIcon(Bitmap poppingIconBitmap) {
+        this.poppingIconBitmap = poppingIconBitmap;
+    }
+
+    public void setStandardIcon(Bitmap standardIconBitmap) {
+        this.standardIconBitmap = standardIconBitmap;
     }
 
     public void setStandardIcon(Drawable standardIcon) {
@@ -101,7 +105,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
     public void setArrowVisibility(int visibility) {
         arrowView.setVisibility(visibility);
-     }
+    }
 
     public void setArrowMargins(int marginLeft, int marginTop, int marginRight, int marginBottom) {
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) arrowView.getLayoutParams();
@@ -145,7 +149,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
     private void popUpButton() {
         if (animatorShow != null) {
-            poppingButton.setImageDrawable(getPoppingIconDrawable());
+            setPoppingImageOnButton();
             poppingButtonAnimation = new AnimationSet(false);
             Animation zoomIn = AnimationUtils.loadAnimation(context, R.anim.zoom_in_out);
             poppingButtonAnimation.addAnimation(zoomIn);
@@ -181,7 +185,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                poppingButton.setImageDrawable(getStandardIconDrawable());
+                setStandardImageOnButton();
                 poppingButtonAnimation = new AnimationSet(false);
                 Animation zoomIn = AnimationUtils.loadAnimation(context, R.anim.fade_in);
                 poppingButtonAnimation.addAnimation(zoomIn);
@@ -196,6 +200,22 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
         poppingButton.startAnimation(poppingButtonAnimation);
     }
 
+    private void setPoppingImageOnButton() {
+        if (poppingIcon != null) {
+            poppingButton.setImageDrawable(poppingIcon);
+        } else {
+            poppingButton.setImageBitmap(poppingIconBitmap);
+        }
+    }
+
+    private void setStandardImageOnButton() {
+        if (poppingIcon != null) {
+            poppingButton.setImageDrawable(standardIcon);
+        } else {
+            poppingButton.setImageBitmap(standardIconBitmap);
+        }
+    }
+
     @Override
     protected void collapseOnDefaultCase() {
         super.collapseOnDefaultCase();
@@ -208,7 +228,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
     protected void onCollapseAnimatorEnd() {
         super.onCollapseAnimatorEnd();
         if (withPoppingButton) {
-            poppingButton.setImageDrawable(getStandardIconDrawable());
+            setPoppingImageOnButton();
         }
     }
 

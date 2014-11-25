@@ -3,8 +3,6 @@ package com.theguardian.subtlepromptlibrary.views;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.content.res.Resources;
-import android.os.Build;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
@@ -43,7 +41,7 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
     }
 
     private int getDefaultPopUpHeight() {
-        return context.getResources().getDimensionPixelSize(R.dimen.action_bar_height) + getStatusBarHeight();
+        return context.getResources().getDimensionPixelSize(R.dimen.prompt_popup_height);
     }
 
     /*
@@ -64,15 +62,6 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
 
     public interface Listener {
         public void onCollapseEnd();
-    }
-
-    private int getStatusBarHeight() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN)
-            return 0; //The status bar hiding seems to behave differently on ICS
-
-        Resources res = context.getResources();
-        int resourceId = res.getIdentifier("status_bar_height", "dimen", "android");
-        return resourceId > 0 ? res.getDimensionPixelSize(resourceId) : 0;
     }
 
     public void setAnimation(Listener listener) {
