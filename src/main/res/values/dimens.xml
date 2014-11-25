@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="action_bar_height">64dp</dimen>
-    <dimen name="prompt_popup_height">83dp</dimen>
+    <dimen name="prompt_popup_height">88dp</dimen>
 
-    <dimen name="prompt_popup_with_image_height">100dp</dimen>
+    <dimen name="prompt_popup_with_image_height">118dp</dimen>
     <dimen name="prompt_arrow_margin_top">4dp</dimen>
     <dimen name="prompt_arrow_margin_left">50dp</dimen>
     <dimen name="prompt_arrow_save_for_later_signed_margin_left">148dp</dimen>
