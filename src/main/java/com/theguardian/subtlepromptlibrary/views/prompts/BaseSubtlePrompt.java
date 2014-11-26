@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -18,6 +19,7 @@ import com.theguardian.subtlepromptlibrary.views.SmoothHeaderRelativeLayout;
 
 public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View.OnClickListener {
 
+    private static final int DELAY_ANIMATION_FINISH = 500;
     private TextView titleTextView;
     private TextView bodyTextView;
     private ImageView promptImage;
@@ -132,7 +134,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                currentState = PromptStateType.EXPANDED;
+                setAnimationFinished();
             }
 
             @Override
@@ -161,7 +163,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
-                    currentState = PromptStateType.EXPANDED;
+                    setAnimationFinished();
                 }
 
                 @Override
@@ -171,6 +173,15 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
             });
             poppingButton.startAnimation(poppingButtonAnimation);
         }
+    }
+
+    public void setAnimationFinished() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currentState = PromptStateType.EXPANDED;
+            }
+        }, DELAY_ANIMATION_FINISH);
     }
 
     private void fadeOutButton() {
