@@ -61,6 +61,7 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
     }
 
     public interface Listener {
+        public void onCollapseStart();
         public void onCollapseEnd();
     }
 
@@ -171,7 +172,7 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
     }
 
     protected void onCollapseAnimatorStart() {
-
+        listener.onCollapseStart();
     }
 
     protected void onCollapseAnimatorEnd() {

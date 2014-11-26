@@ -234,6 +234,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
 
     @Override
     protected void onCollapseAnimatorStart() {
+        super.onCollapseAnimatorStart();
         if (withPoppingButton && poppingButtonAnimation != null && poppingButtonAnimation.isInitialized()) {
             poppingButtonAnimation.cancel();
         }
