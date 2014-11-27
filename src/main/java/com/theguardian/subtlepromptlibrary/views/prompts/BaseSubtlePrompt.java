@@ -74,16 +74,16 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
         titleTextView.setText(message);
     }
 
-    public void setBodyText(String body) {
+    public void setPromptBody(String body) {
         bodyTextView.setVisibility(View.VISIBLE);
         bodyTextView.setText(body);
     }
 
-    public void setTitleTypeface(Typeface tf) {
+    public void setPromptTitleTypeface(Typeface tf) {
         titleTextView.setTypeface(tf);
     }
 
-    public void setBodyTypeface(Typeface tf) {
+    public void setPromptBodyTypeface(Typeface tf) {
         bodyTextView.setTypeface(tf);
     }
 
