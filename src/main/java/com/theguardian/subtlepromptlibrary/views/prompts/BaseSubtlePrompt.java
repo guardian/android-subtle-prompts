@@ -3,6 +3,7 @@ package com.theguardian.subtlepromptlibrary.views.prompts;
 import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -73,13 +74,21 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
         titleTextView.setText(message);
     }
 
-    public void setPromptCloseButton(Drawable drawable) {
-        promptCloseImageView.setBackgroundDrawable(drawable);
-    }
-
     public void setBodyText(String body) {
         bodyTextView.setVisibility(View.VISIBLE);
         bodyTextView.setText(body);
+    }
+
+    public void setTitleTypeface(Typeface tf) {
+        titleTextView.setTypeface(tf);
+    }
+
+    public void setBodyTypeface(Typeface tf) {
+        bodyTextView.setTypeface(tf);
+    }
+
+    public void setPromptCloseButton(Drawable drawable) {
+        promptCloseImageView.setBackgroundDrawable(drawable);
     }
 
     public void setPromptImage(Drawable drawable) {
