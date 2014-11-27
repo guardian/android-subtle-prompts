@@ -23,6 +23,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">@dimen/prompt_text_body_size</item>

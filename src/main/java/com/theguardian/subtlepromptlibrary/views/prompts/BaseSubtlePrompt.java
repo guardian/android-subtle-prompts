@@ -28,6 +28,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
     private Drawable standardIcon;
     private Bitmap poppingIconBitmap;
     private Bitmap standardIconBitmap;
+    private View promptContainer;
 
     private ImageView promptCloseImageView;
     private View arrowView;
@@ -52,6 +53,7 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
     }
 
     protected void initFields() {
+        promptContainer = findViewById(R.id.prompt_container);
         promptCloseImageView = (ImageView) findViewById(R.id.prompt_close_button);
         titleTextView = (TextView) findViewById(R.id.prompt_title_text);
         bodyTextView = (TextView) findViewById(R.id.prompt_body_text);
@@ -94,6 +96,14 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
     public void setPromptImage(Drawable drawable) {
         promptImage.setVisibility(View.VISIBLE);
         promptImage.setBackgroundDrawable(drawable);
+    }
+
+    public void setPromptContainerPadding(int left, int top, int right, int bottom) {
+        promptContainer.setPadding(left, top, right, bottom);
+    }
+
+    public void setPromptContainerBackgroundColor(int color) {
+        promptContainer.setBackgroundColor(color);
     }
 
     public void setPoppingIcon(Drawable poppingIcon) {
