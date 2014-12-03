@@ -7,11 +7,15 @@
         <item name="android:paddingTop">8dp</item>
     </style>
 
-    <style name="subtlePromptImageView">
+    <style name="subtlePromptCloseImageView">
         <item name="android:layout_width">@dimen/prompt_icon_size</item>
         <item name="android:layout_height">@dimen/prompt_icon_size</item>
-        <item name="android:layout_marginLeft">@dimen/prompt_icon_padding</item>
-        <item name="android:layout_marginRight">@dimen/prompt_icon_padding</item>
+        <item name="android:layout_margin">@dimen/prompt_icon_padding</item>
+    </style>
+
+    <style name="subtlePromptImageView">
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
     </style>
 
     <style name="subtlePromptTitle">

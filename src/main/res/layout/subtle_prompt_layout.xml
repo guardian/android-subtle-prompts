@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.theguardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.theguardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/prompt_root_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -11,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/prompt_arrow_margin_left"
         android:layout_marginTop="4dp"
-        android:background="@drawable/arrow"/>
+        android:background="@drawable/arrow" />
 
     <RelativeLayout
         android:id="@+id/prompt_container"
@@ -22,18 +21,17 @@
 
         <ImageView
             android:id="@+id/prompt_close_button"
-            style="@style/subtlePromptImageView"
+            style="@style/subtlePromptCloseImageView"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="4dp"
             android:contentDescription="@string/cancel" />
 
         <ImageView
             android:id="@+id/prompt_image_view"
-            android:layout_alignParentLeft="true"
+            style="@style/subtlePromptImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
 
         <TextView
             android:id="@+id/prompt_title_text"
@@ -44,8 +42,8 @@
         <TextView
             android:id="@+id/prompt_body_text"
             style="@style/subtlePromptBody"
-            android:layout_toRightOf="@id/prompt_image_view"
-            android:layout_below="@id/prompt_title_text"/>
+            android:layout_below="@id/prompt_title_text"
+            android:layout_toRightOf="@id/prompt_image_view" />
     </RelativeLayout>
 
 </com.theguardian.subtlepromptlibrary.views.prompts.BaseSubtlePrompt>
