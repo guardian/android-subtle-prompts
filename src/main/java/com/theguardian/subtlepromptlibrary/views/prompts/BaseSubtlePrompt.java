@@ -72,11 +72,19 @@ public class BaseSubtlePrompt extends SmoothHeaderRelativeLayout implements View
         withPoppingButton = true;
     }
 
-    public void setPromptTitle(String message) {
+    public TextView getPromptTitleTextView() {
+        return titleTextView;
+    }
+
+    public TextView getPromptBodyTextView() {
+        return bodyTextView;
+    }
+
+    public void setPromptTitle(CharSequence message) {
         titleTextView.setText(message);
     }
 
-    public void setPromptBody(String body) {
+    public void setPromptBody(CharSequence body) {
         bodyTextView.setVisibility(View.VISIBLE);
         bodyTextView.setText(body);
     }
