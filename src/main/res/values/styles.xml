@@ -10,7 +10,6 @@
     <style name="subtlePromptCloseImageView">
         <item name="android:layout_width">@dimen/prompt_icon_size</item>
         <item name="android:layout_height">@dimen/prompt_icon_size</item>
-        <item name="android:layout_margin">@dimen/prompt_icon_padding</item>
     </style>
 
     <style name="subtlePromptImageView">
