@@ -21,6 +21,7 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
     protected ValueAnimator animatorShow;
     protected PromptStateType currentState;
     protected Context context;
+    protected int delayShowPopup = DELAY_SHOW_POPUP;
 
     public SmoothHeaderRelativeLayout(Context context) {
         super(context);
@@ -80,6 +81,10 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
         animatorHide = collapseAnimator(popUpHeight);
     }
 
+    public void setDelayShowPopup(int delayShowPopup) {
+        this.delayShowPopup = delayShowPopup;
+    }
+
     public void setPopUpHeight(int popUpHeight) {
         this.popUpHeight = popUpHeight;
     }
@@ -96,10 +101,10 @@ public class SmoothHeaderRelativeLayout extends RelativeLayout {
             public void run() {
                 expand();
             }
-        }, DELAY_SHOW_POPUP);
+        }, delayShowPopup);
     }
 
-    private void expand() {
+    public void expand() {
         if (animatorShow == null) {
             setAnimator();
         }
