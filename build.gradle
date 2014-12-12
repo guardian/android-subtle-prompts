@@ -11,6 +11,10 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.+'
+}
+
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.0"
@@ -18,8 +22,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 5
-        versionName "1.0.5"
+        versionCode 6
+        versionName "1.0.6"
     }
     buildTypes {
         release {
