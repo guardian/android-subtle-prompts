@@ -17,7 +17,7 @@ public class RetractableToolbar extends Toolbar {
     private int popUpHeight;
     protected ValueAnimator animatorShow;
     protected Context context;
-    private boolean isVisible;
+    private boolean isVisible = true;
 
     public RetractableToolbar(Context context) {
         super(context);
