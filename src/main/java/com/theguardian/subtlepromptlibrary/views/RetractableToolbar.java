@@ -1,5 +1,6 @@
 package com.theguardian.subtlepromptlibrary.views;
 
+import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.v7.widget.Toolbar;
@@ -16,6 +17,7 @@ public class RetractableToolbar extends Toolbar {
     private int popUpHeight;
     protected ValueAnimator animatorShow;
     protected Context context;
+    private boolean isVisible;
 
     public RetractableToolbar(Context context) {
         super(context);
@@ -69,11 +71,15 @@ public class RetractableToolbar extends Toolbar {
         if (animatorShow == null) {
             setAnimator();
         }
-        animatorShow.start();
+        if (!animatorShow.isRunning() && !isVisible) {
+            animatorShow.start();
+        }
     }
 
     public void hide() {
-        animatorHide.start();
+        if (!animatorHide.isRunning() && isVisible) {
+            animatorHide.start();
+        }
     }
 
     private ValueAnimator slideAnimator(int start, int end) {
@@ -91,12 +97,55 @@ public class RetractableToolbar extends Toolbar {
                 setLayoutParams(layoutParams);
             }
         });
+        animator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                isVisible = true;
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
 
         animator.setInterpolator(new LinearInterpolator());
         return animator;
     }
 
     private ValueAnimator collapseAnimator(int end) {
-        return slideAnimator(end, 0);
+        ValueAnimator animator = slideAnimator(end, 0);
+        animator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                isVisible = false;
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+        return animator;
     }
 }
