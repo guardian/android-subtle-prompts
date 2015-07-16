@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="action_bar_height">64dp</dimen>
+    <dimen name="action_bar_height">52dp</dimen>
     <dimen name="prompt_popup_height">88dp</dimen>
 
     <dimen name="prompt_popup_with_image_height">118dp</dimen>
