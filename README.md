@@ -48,6 +48,19 @@ If you are using ProGuard you might need to add the following option:
 -dontwarn com.guardian.subtlepromptlibrary.**
 ```
 
+Deploying to Maven
+-------------------
+
+Set the following values in your local.properties file:
+
+NEXUS_USERNAME=Replace_with_valid_username
+NEXUS_PASSWORD=Replace_with_valid_password
+
+Then to upload run:
+
+    gradle clean build uploadArchives
+
+
 License
 --------
 
