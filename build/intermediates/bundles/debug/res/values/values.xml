@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/rbates/Projects/android-subtle-prompts/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="prompt_bg">#005689</color>
-    <!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/rbates/Projects/android-subtle-prompts/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="action_bar_height">64dp</dimen>
+    <dimen name="action_bar_height">52dp</dimen>
     <dimen name="prompt_arrow_margin_left">50dp</dimen>
     <dimen name="prompt_arrow_margin_top">4dp</dimen>
     <dimen name="prompt_arrow_save_for_later_margin_left">198dp</dimen>
     <dimen name="prompt_arrow_save_for_later_signed_margin_left">148dp</dimen>
     <dimen name="prompt_icon_padding">4dp</dimen>
     <dimen name="prompt_icon_size">28dp</dimen>
-    <dimen name="prompt_popup_height">83dp</dimen>
-    <dimen name="prompt_popup_with_image_height">100dp</dimen>
+    <dimen name="prompt_popup_height">88dp</dimen>
+    <dimen name="prompt_popup_with_image_height">118dp</dimen>
     <dimen name="prompt_text_body_size">14sp</dimen>
     <dimen name="prompt_text_title_big_size">26sp</dimen>
     <dimen name="prompt_text_title_size">20sp</dimen>
-    <!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/rbates/Projects/android-subtle-prompts/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">SubtlePromptLibrary</string>
     <string name="cancel">Cancel</string>
-    <!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/rbates/Projects/android-subtle-prompts/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="subtlePromptBody">
         <item name="android:layout_width">match_parent</item>
@@ -32,16 +32,22 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">@dimen/prompt_text_body_size</item>
     </style>
-    <style name="subtlePromptImageView">
+    <style name="subtlePromptCloseImageView">
         <item name="android:layout_width">@dimen/prompt_icon_size</item>
         <item name="android:layout_height">@dimen/prompt_icon_size</item>
-        <item name="android:layout_marginLeft">@dimen/prompt_icon_padding</item>
-        <item name="android:layout_marginRight">@dimen/prompt_icon_padding</item>
+    </style>
+    <style name="subtlePromptContainer">
+        <item name="android:background">@color/prompt_bg</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+    <style name="subtlePromptImageView">
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
     </style>
     <style name="subtlePromptTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">8dp</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">8dp</item>
         <item name="android:textColor">@android:color/white</item>
