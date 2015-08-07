@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<alpha xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/decelerate_interpolator"
-    android:fromAlpha="0.0" android:toAlpha="1.0"
-    android:duration="@android:integer/config_mediumAnimTime" /><!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/src/main/res/anim/fade_in.xml --><!-- From: file:/Users/jgumiel/development/git/android-subtle-prompts/build/intermediates/bundles/debug/res/anim/fade_in.xml -->
