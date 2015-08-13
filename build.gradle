@@ -23,7 +23,8 @@ android {
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 9
-        versionName "1.0.8"
+        //this versionName should be sync with VERSION_NAME in gradle.properties
+        versionName "1.0.10"
     }
     buildTypes {
         release {
